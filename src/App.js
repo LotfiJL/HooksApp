@@ -1,10 +1,13 @@
 import "./App.css";
-import TODO from "./countfolder/TODO";
-
+//import TODO from "./UseState/TODO";
+//import ClassCompo from "./useEffect/ClassCompo";  ---- Dedicated for  the Useeffect test  on Class compo Approach --
+import FuncCompo from "./useEffect/FunctionCompo";
 function App() {
   return (
     <div className="text-center ">
-      <TODO />
+      {/* <ClassCompo />*/}
+      {/* <TODO /> */}
+      <FuncCompo />
     </div>
   );
 }
