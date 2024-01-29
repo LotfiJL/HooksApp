@@ -6,6 +6,7 @@ class simulateUseeffect extends Component {
 
     this.state = {
       count: 0,
+      namee: "",
     };
   }
 
@@ -20,12 +21,25 @@ class simulateUseeffect extends Component {
   };
 
   componentDidUpdate(prevProps, prevState) {
-    document.title = `Clicked ${this.state.count} times`;
+    if (prevState.count !== this.state.count) {
+      // Condition --- topic .
+      console.log("Action Made");
+      document.title = `Clicked ${this.state.count} times`;
+    }
   }
 
   render() {
     return (
       <div>
+        <input
+          type="text"
+          className="form-control mx-auto d-block w-50"
+          value={this.state.namee}
+          placeholder="Write to test "
+          onChange={(e) => {
+            this.setState({ namee: e.target.value });
+          }}
+        />
         <Button variant="primary" onClick={this.Change}>
           Cklick here
         </Button>
